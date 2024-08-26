@@ -15,3 +15,28 @@
 
 # MSBuild Binary and Structured Log
 *.binlog
+
+# Visual Studio
+.vs/
+*.vs/
+*.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Ignore build output
+bin/
+obj/
+
+# Ignore other generated files
+*.log
+*.tmp
+*.swp
+*.suo
+*.user
+
+# Ignore other system files
+.DS_Store
+Thumbs.db
+
