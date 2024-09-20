@@ -64,8 +64,8 @@ namespace PostReplyCreationPlugin
             private string[] ExtractTaggedUsernames(string content)
             {
                 // Adjusted regex to allow spaces and other characters in usernames
-                var regex = new Regex(@"@([^\s@]+(?:\s[^\s@]+)*)");
-                var matches = regex.Matches(content);
+                var regex = new Regex(@"@([^\s,@]+(?:\s[^\s,@]+)*)(?=[,\s]|$)");
+            var matches = regex.Matches(content);
                 return matches.Cast<Match>().Select(m => m.Groups[1].Value).ToArray();
             }
 
